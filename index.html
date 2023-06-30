@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Estudiantes - Redes de Datos</title>
+</head>
+<body>
+    
+    <h1>Estudiantes - Redes de Datos</h1>
+    
+    <h2>Cargar Estudiante</h2>
+    <form id="cargarEstudianteForm">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre"><br><br>
+        
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" name="apellido"><br><br>
+        
+        <label for="comision">Comisión:</label>
+        <input type="text" id="comision" name="comision"><br><br>
+        
+        <label for="nota">Nota:</label>
+        <input type="text" id="nota" name="nota"><br><br>
+        
+        <input type="submit" value="Cargar Estudiante">
+    </form>
+    
+    <h2>Lista de Estudiantes</h2>
+    <table id="listaEstudiantes">
+        <thead>
+            <tr>
+                
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Comisión</th>
+                <th>Nota</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+        </tbody>
+    </table>
+    
+    <script>
+        // Función para cargar la lista de estudiantes
+        function cargarListaEstudiantes() {
+    fetch("http://localhost:5000/estudiantes")
+    .then(response => response.json())
+    .then(data => {
+        var listaEstudiantes = document.getElementById("listaEstudiantes");
+        var tbody = listaEstudiantes.getElementsByTagName("tbody")[0];
+        tbody.innerHTML = "";
+
+        data.estudiantes.forEach(estudiante => { // Acceder a la propiedad 'estudiantes' en 'data'
+            var row = document.createElement("tr");
+            row.innerHTML = `
+                
+                <td>${estudiante.nombre}</td>
+                <td>${estudiante.apellido}</td>
+                <td>${estudiante.comision}</td>
+                <td>${estudiante.nota}</td>
+            `;
+            tbody.appendChild(row);
+        });
+    })
+    .catch(error => {
+        console.error("Error al cargar la lista de estudiantes: ", error);
+    });
+}
+
+        
+        // Evento cuando se envía el formulario de cargar estudiante
+        document.getElementById("cargarEstudianteForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            
+            var nombre = document.getElementById("nombre").value;
+            var apellido = document.getElementById("apellido").value;
+            var comision = document.getElementById("comision").value;
+            var nota = document.getElementById("nota").value;
+            
+            var estudiante = {
+                "nombre": nombre,
+                "apellido": apellido,
+                "comision": comision,
+                "nota": nota
+            };
+            
+            fetch("http://localhost:5000/estudiantes", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(estudiante)
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert("Estudiante cargado exitosamente: " + JSON.stringify(data));
+                document.getElementById("cargarEstudianteForm").reset();
+                cargarListaEstudiantes(); // Actualizar la lista de estudiantes después de cargar uno nuevo
+            })
+            .catch(error => {
+                alert("Error al cargar estudiante: " + error);
+            });
+        });
+        
+        // Cargar la lista de estudiantes al cargar la página
+        cargarListaEstudiantes();
+    </script>
+</body>
+</html>

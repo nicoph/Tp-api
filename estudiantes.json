@@ -1,0 +1,25 @@
+{
+    "estudiantes": [
+        {
+            "nombre": "Comunicaci\u00f3n",
+            "apellido": "a",
+            "comision": "1",
+            "nota": "212",
+            "id": "5eaff78d-b773-4b94-95af-354f5ad8c5a3"
+        },
+        {
+            "nombre": "",
+            "apellido": "",
+            "comision": "",
+            "nota": "",
+            "id": "1a26e5fc-3387-4fd8-abf0-4fdb5b042c99"
+        },
+        {
+            "nombre": "sasa",
+            "apellido": "2dsd",
+            "comision": "3",
+            "nota": "2",
+            "id": "988ffe54-bc5d-42f9-a7df-d07d812cf8fd"
+        }
+    ]
+}
