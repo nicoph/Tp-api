@@ -95,7 +95,7 @@
             .then(data => {
                 alert("Estudiante cargado exitosamente: " + JSON.stringify(data));
                 document.getElementById("cargarEstudianteForm").reset();
-                cargarListaEstudiantes(); // Actualizar la lista de estudiantes después de cargar uno nuevo
+                cargarListaEstudiantes(); // funcion nueva
             })
             .catch(error => {
                 alert("Error al cargar estudiante: " + error);

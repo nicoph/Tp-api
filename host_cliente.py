@@ -16,5 +16,5 @@ def agregar_estudiante(estudiante):
     else:
         return None
 
-# Agrega funciones para actualizar y eliminar estudiantes
+# Agregar funciones para actualizar y eliminar estudiantes
 
