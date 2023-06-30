@@ -1,25 +1,196 @@
 {
     "estudiantes": [
         {
-            "nombre": "Comunicaci\u00f3n",
-            "apellido": "a",
+            "legajo": "G-9155-2",
+            "nombre": "Abril",
+            "apellido": "Gimenez",
+            "comision": "2",
+            "nota": "89",
+            "id": "ec576374-72ec-4604-acb3-e75508d709f3"
+        },
+        {
+            "legajo": "G-7875-2",
+            "nombre": "Laura",
+            "apellido": "Gonzalez",
+            "comision": "2",
+            "nota": "95",
+            "id": "75b0a448-a791-4c6b-b840-451ce0f350e9"
+        },
+        {
+            "legajo": "P-4110-1",
+            "nombre": "Ana",
+            "apellido": "Perez",
             "comision": "1",
-            "nota": "212",
-            "id": "5eaff78d-b773-4b94-95af-354f5ad8c5a3"
+            "nota": "53",
+            "id": "46ee30db-e15a-4c03-b698-039c3a2b3b53"
         },
         {
-            "nombre": "",
-            "apellido": "",
-            "comision": "",
-            "nota": "",
-            "id": "1a26e5fc-3387-4fd8-abf0-4fdb5b042c99"
+            "legajo": "G-9381-2",
+            "nombre": "Pedro",
+            "apellido": "Gomez",
+            "comision": "2",
+            "nota": "68",
+            "id": "918341ab-8dd2-41a2-8e74-c2cc0504140e"
         },
         {
-            "nombre": "sasa",
-            "apellido": "2dsd",
-            "comision": "3",
+            "legajo": "P-5216-1",
+            "nombre": "Carlos",
+            "apellido": "Perez",
+            "comision": "1",
+            "nota": "84",
+            "id": "4e7b9253-9778-4fc5-9caa-fae3f2f7dd2c"
+        },
+        {
+            "legajo": "S-9072-1",
+            "nombre": "Luz",
+            "apellido": "Sanchez",
+            "comision": "1",
+            "nota": "66",
+            "id": "d0d864c8-25c4-4599-ba9e-97e92bf8d3cc"
+        },
+        {
+            "legajo": "L-2665-1",
+            "nombre": "Valentina",
+            "apellido": "Lopez",
+            "comision": "1",
+            "nota": "41",
+            "id": "d87bf41f-74b3-4311-9c3a-e887935805d0"
+        },
+        {
+            "legajo": "R-8958-2",
+            "nombre": "Maria",
+            "apellido": "Rodriguez",
+            "comision": "2",
+            "nota": "69",
+            "id": "8ff88890-04f0-4a40-8439-6a076d0e97e8"
+        },
+        {
+            "legajo": "T-7155-1",
+            "nombre": "Miguel",
+            "apellido": "Torres",
+            "comision": "1",
+            "nota": "9",
+            "id": "554139b7-94cc-4891-bd5f-efd3e40602bb"
+        },
+        {
+            "legajo": "M-5662-2",
+            "nombre": "Ana",
+            "apellido": "Martinez",
+            "comision": "2",
+            "nota": "65",
+            "id": "7377dc9f-4b20-490a-86e0-73073dba299b"
+        },
+        {
+            "legajo": "F-2321-2",
+            "nombre": "Sofia",
+            "apellido": "Fernandez",
+            "comision": "2",
+            "nota": "22",
+            "id": "5c085b3e-6a53-4834-b110-3fc8102c9d1c"
+        },
+        {
+            "legajo": "G-9662-2",
+            "nombre": "Gabriel",
+            "apellido": "Gonzalez",
+            "comision": "2",
+            "nota": "84",
+            "id": "25c85223-5e79-46f9-8328-c4fb33dcf750"
+        },
+        {
+            "legajo": "P-2966-2",
+            "nombre": "Valentina",
+            "apellido": "Perez",
+            "comision": "2",
+            "nota": "22",
+            "id": "3ea7656e-6937-4909-b57d-4f8e849144eb"
+        },
+        {
+            "legajo": "R-4547-2",
+            "nombre": "Carlos",
+            "apellido": "Rodriguez",
+            "comision": "2",
+            "nota": "41",
+            "id": "25c810ee-9a2f-4354-bedc-fbb972113293"
+        },
+        {
+            "legajo": "R-6341-1",
+            "nombre": "Ricardo",
+            "apellido": "Rodriguez",
+            "comision": "1",
+            "nota": "65",
+            "id": "9efac435-6ff4-4d88-9506-b8e429c2d35c"
+        },
+        {
+            "legajo": "T-1613-2",
+            "nombre": "Ana",
+            "apellido": "Torres",
+            "comision": "2",
+            "nota": "97",
+            "id": "ea484df8-1f94-4a74-9c5d-918e753aa044"
+        },
+        {
+            "legajo": "G-8916-2",
+            "nombre": "Martin",
+            "apellido": "Gonzalez",
+            "comision": "2",
+            "nota": "3",
+            "id": "642cd769-3584-4639-b32f-cb0697311aa0"
+        },
+        {
+            "legajo": "F-4942-2",
+            "nombre": "Laura",
+            "apellido": "Fernandez",
+            "comision": "2",
+            "nota": "56",
+            "id": "fe34c500-bc53-4bd2-8c12-9abb95447749"
+        },
+        {
+            "legajo": "G-9895-2",
+            "nombre": "Miguel",
+            "apellido": "Gimenez",
+            "comision": "2",
+            "nota": "26",
+            "id": "24c74cde-6a6b-4c2a-bf7d-afa02e35e31d"
+        },
+        {
+            "legajo": "F-4973-2",
+            "nombre": "Gabriel",
+            "apellido": "Fernandez",
+            "comision": "2",
+            "nota": "60",
+            "id": "9d134e0c-960c-4a9e-9e48-47233a528dc6"
+        },
+        {
+            "legajo": "R-0562-2",
+            "nombre": "Valentina",
+            "apellido": "Rodriguez",
+            "comision": "2",
+            "nota": "92",
+            "id": "1605805a-d743-4cbe-bd68-c0d959aad153"
+        },
+        {
+            "legajo": "S-4018-2",
+            "nombre": "Laura",
+            "apellido": "Sanchez",
+            "comision": "2",
             "nota": "2",
-            "id": "988ffe54-bc5d-42f9-a7df-d07d812cf8fd"
+            "id": "d2343850-e66f-4e6d-b2fe-377a67585acf"
+        },
+        {
+            "legajo": "M-4374-2",
+            "nombre": "Maria",
+            "apellido": "Martinez",
+            "comision": "2",
+            "nota": "79",
+            "id": "20fdf9ef-f6f6-433f-ad5f-2e623903948b"
+        },
+        {
+            "legajo": "R-8353-1",
+            "nombre": "Juan",
+            "apellido": "Rodriguez",
+            "comision": "1",
+            "nota": "61",
+            "id": "5d5cd781-83d0-4223-a14c-06dfa3c9cf68"
         }
     ]
 }
