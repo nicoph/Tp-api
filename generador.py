@@ -2,6 +2,8 @@ import random
 import json
 import uuid
 
+
+
 nombres = ["Juan", "Maria", "Carlos", "Lucia", "Jose", "Ana", "Martin", "Laura", "Diego", "Valentina",
            "Miguel", "Sofia", "Pedro", "Camila", "Fernando", "Abril", "Ricardo", "Agustina", "Gabriel", "Luz"]
 
@@ -29,6 +31,7 @@ for _ in range(25):
 
 # Guardar la lista de estudiantes en un archivo JSON
 archivo_json = "estudiantes.json"
+
 with open(archivo_json, 'w') as archivo:
     json.dump({"estudiantes": estudiantes}, archivo, indent=4, ensure_ascii=False)
 

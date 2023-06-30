@@ -28,6 +28,27 @@ def buscar_estudiante_por_legajo(legajo):
         return jsonify(estudiante_encontrado)
     else:
         return jsonify({'mensaje': 'Estudiante no encontrado'}), 404
+    
+@app.route('/estudiantes/aprobado', methods=['GET'])
+def obtener_estudiantes_por_aprobado():
+    with open(archivo_json, 'r') as archivo:
+        estudiantes = json.load(archivo)
+    resultado = [estudiante for estudiante in estudiantes['estudiantes'] if int(estudiante['nota']) >= 60]
+    return jsonify(resultado)
+
+@app.route('/estudiantes/desaprobado', methods=['GET'])
+def obtener_estudiantes_por_desaprobado():
+    with open(archivo_json, 'r') as archivo:
+        estudiantes = json.load(archivo)
+    resultado = [estudiante for estudiante in estudiantes['estudiantes'] if int(estudiante['nota']) < 60]
+    return jsonify(resultado)
+
+@app.route('/estudiantes/comision/<string:comision>', methods=['GET'])
+def obtener_estudiantes_por_comision(comision):
+    with open(archivo_json, 'r') as archivo:
+        estudiantes = json.load(archivo)
+    resultado = [estudiante for estudiante in estudiantes['estudiantes'] if estudiante['comision'] == comision]
+    return jsonify(resultado)
 
 @app.route('/estudiantes/apellido/<string:apellido>', methods=['GET'])
 def obtener_estudiantes_por_apellido(apellido):

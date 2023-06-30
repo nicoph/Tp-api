@@ -3,8 +3,11 @@ import requests
 servidor_url = ""
 
 def obtener_ip_servidor():
-    global servidor_url
-    servidor_url = input("Ingrese la IP del servidor: ")
+    default="localhost"
+    global servidor_url  
+    servidor_url = input("Ingrese la IP del servidor(Enter para localhost): ")
+    if servidor_url == "":
+        servidor_url=default
     print("Conexión establecida con el servidor:", servidor_url)
 
 def obtener_estudiantes():
@@ -19,8 +22,7 @@ def obtener_estudiantes():
                 comision = estudiante["comision"]
                 nota = estudiante["nota"]
                 print(f"Legajo: {legajo}, Nombre: {nombre}, Apellido: {apellido}, Comisión: {comision}, Nota: {nota}")
-        else:
-            print("No se encontraron estudiantes.")
+        
     else:
         print("Error al obtener los estudiantes.")
 
@@ -97,6 +99,58 @@ def borrar_estudiante():
     else:
         print("Error al eliminar el estudiante")
 
+def ver_aprobados():    
+    response = requests.get(f"http://{servidor_url}:5000/estudiantes/aprobado")
+    if response.status_code == 200:
+        estudiantes = response.json()
+        if estudiantes:
+            for estudiante in estudiantes:
+                legajo = estudiante["legajo"]
+                nombre = estudiante["nombre"]
+                apellido = estudiante["apellido"]
+                comision = estudiante["comision"]
+                nota = estudiante["nota"]
+                print(f"Legajo: {legajo}, Nombre: {nombre}, Apellido: {apellido}, Comisión: {comision}, Nota: {nota}")
+        else:
+            print("No se encontraron estudiantes.")
+    else:
+        print("Error al obtener los estudiantes.")
+
+def ver_desaprobados():    
+    response = requests.get(f"http://{servidor_url}:5000/estudiantes/desaprobado")
+    if response.status_code == 200:
+        estudiantes = response.json()
+        if estudiantes:
+            for estudiante in estudiantes:
+                legajo = estudiante["legajo"]
+                nombre = estudiante["nombre"]
+                apellido = estudiante["apellido"]
+                comision = estudiante["comision"]
+                nota = estudiante["nota"]
+                print(f"Legajo: {legajo}, Nombre: {nombre}, Apellido: {apellido}, Comisión: {comision}, Nota: {nota}")
+        else:
+            print("No se encontraron estudiantes.")
+    else:
+        print("Error al obtener los estudiantes.")
+
+def ver_comision():
+    nro=input("Ingrese la Comision: ")    
+    response = requests.get(f"http://{servidor_url}:5000/estudiantes/comision/{nro}")
+    if response.status_code == 200:
+        estudiantes = response.json()
+        if estudiantes:
+            for estudiante in estudiantes:
+                legajo = estudiante["legajo"]
+                nombre = estudiante["nombre"]
+                apellido = estudiante["apellido"]
+                comision = estudiante["comision"]
+                nota = estudiante["nota"]
+                print(f"Legajo: {legajo}, Nombre: {nombre}, Apellido: {apellido}, Comisión: {comision}, Nota: {nota}")
+        else:
+            print("No se encontraron estudiantes.")
+    else:
+        print("Error al obtener los estudiantes.")
+
 def mostrar_menu():
     print("\n")
     print("----- Menú de Opciones -----")
@@ -106,9 +160,14 @@ def mostrar_menu():
     print("4. Consultar notas")
     print("5. Agregar estudiante")
     print("6. Borrar estudiante")
+    print("7. Ver Aprobados")
+    print("8. Ver desaprobados")
+    print("9. Ver comision")
     print("0. Salir")
     print("-----------------------------")
     print("\n")
+
+
 
 def main():
     obtener_ip_servidor()
@@ -139,6 +198,12 @@ def main():
 
         elif opcion == "6":
             borrar_estudiante()
+        elif opcion == "7":
+            ver_aprobados()
+        elif opcion == "8":
+            ver_desaprobados()
+        elif opcion == "9":
+            ver_comision()
 
         elif opcion == "0":
             print("Hasta luego!")
