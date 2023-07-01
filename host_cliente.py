@@ -38,8 +38,7 @@ def consultar_estudiante_por_legajo():
                 comision = estudiantes["comision"]
                 nota = estudiantes["nota"]
                 print(f"Legajo: {legajo}, Nombre: {nombre}, Apellido: {apellido}, Comisión: {comision}, Nota: {nota}")
-        else:
-            print("No se encontraron estudiantes con ese legajo.")
+        
     else:
         print("Error al obtener los estudiantes.")
 
